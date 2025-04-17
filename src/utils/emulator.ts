@@ -20,7 +20,7 @@ export const emulator = {
   StopCashin: function() {
   },
 
-  BankCardPurchase: function(amount: number, cb: (result: boolean) => void, display_cb: (message: string) => void) {
+  BankCardPurchase: function(_amount: number, cb: (result: boolean) => void, display_cb: (message: string) => void) {
     display_cb('Приложите карту');
     
     const handler = (event: KeyboardEvent) => {
@@ -51,7 +51,7 @@ export const emulator = {
   BankCardCancel: function() {
   },
 
-  Vend: function(product_idx: number, cb: (result: boolean) => void) {
+  Vend: function(_product_idx: number, cb: (result: boolean) => void) {
     const handler = (event: KeyboardEvent) => {
       if (event.altKey && event.key === 'v') {
         setTimeout(() => {
